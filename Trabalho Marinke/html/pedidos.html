@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="shortcut icon" href="../img/favicon.webp" type="image/x-icon">
+    <title>Cafeteria - Pedidos</title>
+</head>
+<body id="body_pedidos">
+    <header id="header_pedidos">
+        <div id="div_logo">
+                <img src="../img/logo.webp" alt="Logo da Cafeteria">   
+        </div>
+        <div id="div_menus">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="./menu.html">Cardápio</a></li>
+                    <li><a href="./pedidos.html">Pedidos/Reservas</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="div_banner">
+            <h2>Faça Seu Pedido ou Reserva Conosco!</h2>
+            <p>Escolha seu café favorito, combine com nossos acompanhamentos e garanta uma experiência única, seja para delivery, retirada ou no local.</p>            
+        </div>        
+    </header>
+    <main id="main_pedidos">
+        <form action="processa-pedido.php" method="post">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Selecione os Itens</legend>
+                <div class="checkbox-container">
+                    <div>
+                        <input type="checkbox" id="xicara-cafe" name="itens" value="Xícara de Café">
+                        <label for="xicara-cafe">Xícara de Café</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="xicara-cappuccino" name="itens" value="Xícara de Cappuccino">
+                        <label for="xicara-cappuccino">Xícara de Cappuccino</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="copo-cafe-gelado" name="itens" value="Copo de Café Gelado">
+                        <label for="copo-cafe-gelado">Copo de Café Gelado</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="croissant" name="itens" value="Croissant">
+                        <label for="croissant">Croissant</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="cookie" name="itens" value="Cookie">
+                        <label for="cookie">Cookie</label>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Tipo de Serviço</legend>
+                <input type="radio" id="delivery" name="servico" value="Delivery" required>
+                <label for="delivery">Delivery</label>
+                
+                <input type="radio" id="local" name="servico" value="Local">
+                <label for="local">Consumir no Local</label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Reservas (Opcional)</legend>
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data">
+                
+                <label for="horario">Horário:</label>
+                <input type="time" id="horario" name="horario">
+            </fieldset>
+            
+            <label for="observacoes">Observações:</label>
+            <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+            
+            <button type="submit">Enviar Pedido/Reserva</button>
+        </form>
+    </main>
+</body>
+</html>
